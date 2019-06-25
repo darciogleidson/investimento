@@ -10,4 +10,13 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public function homepage(){
+
+        $variavel = "Homepage do sistema de gest para grupos de investimentos";
+
+        return view('welcome', [
+            'title'=>$variavel
+        ]);
+    }
 }
